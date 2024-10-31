@@ -1,0 +1,46 @@
+{
+  "en": {
+    "keywords": {
+      "experience": "Experiencia",
+      "education": "Educación",
+      "projects": "Proyectos",
+      "tech": "Tecnologías"
+    },
+    "name": ""
+    "birthday": "",
+    "place": "",
+    "email": "",
+    "phone": "",
+    "social": {
+      "linkedin": "",
+      "github": ""
+    },
+    "resume": "",
+    "education": [
+      {
+        "place": "",
+        "date": "",
+        "title": ""
+      }
+    ],
+    "experience": [
+      {
+        "place": "",
+        "date": "",
+        "role": "",
+        "comments": [
+          ""
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "link": "",
+        "title": "",
+        "comments": [
+          "",
+        ]
+      }
+    ]
+  },
+}
