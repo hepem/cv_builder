@@ -10,8 +10,8 @@ import (
 
 func main() {
 	fmt.Println("Building CV ...")
-	langs := [2]string{"es", "en"}
-	for _, lang := range langs {
+	languages := [2]string{"es", "en"}
+	for _, lang := range languages {
 		fmt.Printf("for %s version ...\n", lang)
 		cvData, err := loadCV("data/cv_data.json", lang)
 		if err != nil {
@@ -20,7 +20,6 @@ func main() {
 		}
 
 		templatePath := "templates/renderCV_EngineeringResume.tex"
-		//templatePath := "templates/test.tex"
 
 		texFile := fmt.Sprintf("pdfs/Hector_Perez_Munoz_CV_%s.tex", lang)
 
@@ -37,8 +36,6 @@ func main() {
 
 	fmt.Println("Done!")
 }
-
-// func outputFolder()
 
 func loadCV(filePath string, language string) (*CV, error) {
 	data, err := os.ReadFile(filePath)
@@ -58,17 +55,18 @@ func loadCV(filePath string, language string) (*CV, error) {
 	}
 
 	cv := CV{
-		Keywords:   cvData.Keywords,
-		Name:       cvData.Name,
-		Birthday:   cvData.Birthday,
-		Place:      cvData.Place,
-		Email:      cvData.Email,
-		Resume:     cvData.Resume,
-		Phone:      cvData.Phone,
-		Social:     cvData.Social,
-		Education:  cvData.Education,
-		Experience: cvData.Experience,
-		Projects:   cvData.Projects,
+		Keywords:     cvData.Keywords,
+		Name:         cvData.Name,
+		Birthday:     cvData.Birthday,
+		Place:        cvData.Place,
+		Email:        cvData.Email,
+		Resume:       cvData.Resume,
+		Phone:        cvData.Phone,
+		Social:       cvData.Social,
+		Education:    cvData.Education,
+		Experience:   cvData.Experience,
+		Projects:     cvData.Projects,
+		Technologies: cvData.Technologies,
 	}
 
 	return &cv, nil

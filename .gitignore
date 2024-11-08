@@ -1,8 +1,5 @@
 .DS_Store
 .idea
-*.aux
-*.log
-*.tex
 .env
 pdfs
 data/cv_data.json

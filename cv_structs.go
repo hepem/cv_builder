@@ -1,17 +1,18 @@
 package main
 
 type CV struct {
-	Keywords   Keywords
-	Name       string
-	Birthday   string
-	Place      string
-	Resume     string
-	Email      string
-	Phone      string
-	Social     SocialLinks
-	Education  []Education
-	Experience []Experience
-	Projects   []Projects
+	Keywords     Keywords
+	Name         string
+	Birthday     string
+	Place        string
+	Resume       string
+	Email        string
+	Phone        string
+	Social       SocialLinks
+	Education    []Education
+	Experience   []Experience
+	Projects     []Projects
+	Technologies []Technologies
 }
 
 type Keywords struct {
@@ -46,17 +47,23 @@ type Projects struct {
 	Comments []string
 }
 
+type Technologies struct {
+	Title string
+	Text  string
+}
+
 // CVData mirrors the JSON structure for flexible parsing
 type CVData struct {
-	Keywords   Keywords     `json:"keywords"`
-	Name       string       `json:"name"`
-	Birthday   string       `json:"birthday"`
-	Place      string       `json:"place"`
-	Resume     string       `json:"resume"`
-	Email      string       `json:"email"`
-	Phone      string       `json:"phone"`
-	Social     SocialLinks  `json:"social"`
-	Education  []Education  `json:"education"`
-	Experience []Experience `json:"experience"`
-	Projects   []Projects   `json:"projects"`
+	Keywords     Keywords       `json:"keywords"`
+	Name         string         `json:"name"`
+	Birthday     string         `json:"birthday"`
+	Place        string         `json:"place"`
+	Resume       string         `json:"resume"`
+	Email        string         `json:"email"`
+	Phone        string         `json:"phone"`
+	Social       SocialLinks    `json:"social"`
+	Education    []Education    `json:"education"`
+	Experience   []Experience   `json:"experience"`
+	Projects     []Projects     `json:"projects"`
+	Technologies []Technologies `json:"technologies"`
 }
